@@ -1,211 +1,513 @@
 {
-  "usuarios": [
-    {
-      "id": 501,
-      "nombre": "Carlos",
-      "apellido": "Gomez",
-      "email": "carlos.gomez@example.com",
-      "telefono": "+51987654321",
-      "fechaRegistro": "2025-08-15T14:20:00.000Z"
-    },
-    {
-      "id": 502,
-      "nombre": "Ana",
-      "apellido": "Martinez",
-      "email": "ana.martinez@example.com",
-      "telefono": "+51912345678",
-      "fechaRegistro": "2025-08-20T11:05:00.000Z"
-    },
-    {
-      "id": 510,
-      "nombre": "Javier",
-      "apellido": "Torres",
-      "email": "javier.torres@example.com",
-      "telefono": "+51955512345",
-      "fechaRegistro": "2025-10-03T15:45:00.000Z"
-    }
-  ],
-  "veterinarias": [
-    {
-      "id": 801,
-      "nombre": "Clínica Veterinaria VetSalud",
-      "direccion": "Av. Principal 123, Miraflores, Lima",
-      "telefono": "+5114445566",
-      "servicios": [
-        "Consultas",
-        "Vacunación",
-        "Cirugía",
-        "Laboratorio"
-      ],
-      "horario": "L-V 9:00-20:00, S 9:00-17:00"
-    },
-    {
-      "id": 802,
-      "nombre": "Centro Veterinario Animalia",
-      "direccion": "Calle Los Pinos 456, San Isidro, Lima",
-      "telefono": "+5112223344",
-      "servicios": [
-        "Consultas",
-        "Emergencias 24h",
-        "Ecografías",
-        "Peluquería"
-      ],
-      "horario": "24 horas"
-    }
-  ],
-  "citas": [
-    {
-      "id": 701,
-      "mascotaId": 1,
-      "veterinariaId": 801,
-      "fechaHora": "2025-09-01T10:00:00.000Z",
-      "motivo": "Consulta general de rutina y vacunación",
-      "estado": "Completada",
-      "notas": "Se aplicó vacuna antirrábica. El paciente se encuentra en buen estado."
-    },
-    {
-      "id": 702,
-      "mascotaId": 2,
-      "veterinariaId": 801,
-      "fechaHora": "2025-10-08T11:30:00.000Z",
-      "motivo": "Revisión dental",
-      "estado": "Programada",
-      "notas": ""
-    },
-    {
-      "id": 703,
-      "mascotaId": 1,
-      "veterinariaId": 802,
-      "fechaHora": "2025-10-07T16:00:00.000Z",
-      "motivo": "Consulta por recomendación de dieta",
-      "estado": "Programada",
-      "notas": "Discutir plan de alimentación generado por IA."
-    }
-  ],
-  "mascotas": [
+  "users": [
     {
       "id": 1,
-      "usuarioId": 501,
-      "nombre": "Bruno",
-      "especie": "Perro",
-      "raza": "Labrador Retriever"
+      "email": "contacto@solari.com",
+      "password": "hashed_password_1",
+      "role": "builder"
     },
     {
       "id": 2,
-      "usuarioId": 501,
-      "nombre": "Misha",
-      "especie": "Perro",
-      "raza": "Golden Terrier"
+      "email": "proyectos@futuro.com",
+      "password": "hashed_password_2",
+      "role": "builder"
+    },
+    {
+      "id": 3,
+      "email": "carla.f@email.com",
+      "password": "hashed_password_3",
+      "role": "owner"
+    },
+    {
+      "id": 4,
+      "email": "miguel.v@email.com",
+      "password": "hashed_password_4",
+      "role": "owner"
+    },
+    {
+      "id": 5,
+      "email": "ana.t@email.com",
+      "password": "hashed_password_5",
+      "role": "owner"
     }
   ],
-  "historial-medico": [
+  "user_details": [
+    {
+      "id": 11,
+      "userId": 1,
+      "photoUrl": "https://i.postimg.cc/9F2q1NXt/553366536-1143323887945502-5643860392844066094-n.jpg",
+      "name": "Constructora Solari",
+      "username": "solari_construct",
+      "address": "Av. Gral. Salaverry 2255, San Isidro 15076",
+      "age": 27,
+      "phoneNumber": "+5112345678"
+    },
+    {
+      "id": 12,
+      "userId": 2,
+      "photoUrl": "https://i.postimg.cc/kXCtwhMx/552688656-828722512917727-7439552490625363640-n.jpg",
+      "name": "Inmobiliaria Futuro",
+      "username": "inmo_futuro",
+      "address": "Av. Primavera 2390, Santiago de Surco 15023",
+      "age": 30,
+      "phoneNumber": "+5118765432"
+    },
+    {
+      "id": 13,
+      "userId": 3,
+      "photoUrl": "https://i.postimg.cc/RVTJYQNW/552273561-2408625929534275-3724908057476296514-n.jpg",
+      "name": "Carla Flores",
+      "username": "cflores",
+      "address": "Av. de la Marina 2810, San Miguel 15087",
+      "age": 34,
+      "phoneNumber": "+51987654321"
+    },
+    {
+      "id": 14,
+      "userId": 4,
+      "photoUrl": "https://i.postimg.cc/ncxQTwVR/554104969-1139802880932196-2782217160233569959-n.jpg",
+      "name": "Miguel Veramendi",
+      "username": "mveramendi",
+      "address": "Av Alameda San Marcos 11, Chorrillos 15067",
+      "age": 45,
+      "phoneNumber": "+51912345678"
+    },
+    {
+      "id": 15,
+      "userId": 5,
+      "photoUrl": "https://i.postimg.cc/L4L1tMSk/553581596-1866270757580157-2414420205808536363-n.jpg",
+      "name": "Ana Torres",
+      "username": "atorres",
+      "age": 29,
+      "address": "Santiago de Surco 15023",
+      "phoneNumber": "+51955544333"
+    }
+  ],
+  "subscriptions": [
     {
       "id": 1,
-      "mascotaId": 1,
-      "citaId": 701,
-      "fechaRegistro": "2025-09-01T10:15:00.000Z",
-      "tipoRegistro": "Consulta",
-      "descripcion": "Consulta general de rutina",
-      "veterinario": "Dr. Ricardo Salazar",
-      "observaciones": "Mascota en buen estado general",
-      "costo": 80
+      "builderId": 1,
+      "plan": "Professional",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "builderId": 2,
+      "plan": "Enterprise",
+      "status": "active"
     }
   ],
-  "registrosVacunacion": [
+  "projects": [
+    {
+      "id": 101,
+      "name": "Residencial Los Alamos",
+      "description": "Conjunto residencial moderno con tecnología IoT integrada",
+      "location": "San Isidro, Lima",
+      "totalUnits": 48,
+      "occupiedUnits": 32,
+      "status": "active",
+      "builderId": 1,
+      "createdDate": "2024-03-15T00:00:00Z"
+    },
+    {
+      "id": 102,
+      "name": "Torres del Pacífico",
+      "description": "Complejo de torres residenciales con vista al mar",
+      "location": "Miraflores, Lima",
+      "totalUnits": 120,
+      "occupiedUnits": 98,
+      "status": "active",
+      "builderId": 1,
+      "createdDate": "2024-01-20T00:00:00Z"
+    },
+    {
+      "id": 103,
+      "name": "Conjunto Verde",
+      "description": "Desarrollo eco-sostenible con tecnología smart",
+      "location": "La Molina, Lima",
+      "totalUnits": 80,
+      "occupiedUnits": 45,
+      "status": "construction",
+      "builderId": 2,
+      "createdDate": "2024-06-10T00:00:00Z"
+    }
+  ],
+  "external_clients": [
+    {
+      "id": 1,
+      "fullName": "Carla Alvarez",
+      "projectId": 102,
+      "projectName": "Sin Proyecto Asignado",
+      "accountStatement": "Active",
+      "email": "carla.flores@email.com",
+      "phoneNumber": "+51987654321",
+      "address": "Av. de la Marina 2810, San Miguel 15087"
+    },
+    {
+      "id": 2,
+      "fullName": "Alonso Pérez ",
+      "projectId": 102,
+      "projectName": "Zen Tower",
+      "accountStatement": "Active",
+      "email": "juan.perez@email.com",
+      "phoneNumber": "+51912345678",
+      "address": ""
+    },
+    {
+      "id": 3,
+      "fullName": "María García",
+      "projectId": 103,
+      "accountStatement": "Suspended",
+      "email": "maria.garcia@email.com",
+      "phoneNumber": "+51998877665"
+    },
+    {
+      "id": 4,
+      "fullName": "José Rodríguez",
+      "projectId": 103,
+      "accountStatement": "Active",
+      "email": "jose.rodriguez@email.com",
+      "phoneNumber": "+51955544333"
+    },
+    {
+      "id": 5,
+      "fullName": "Ana Martínez",
+      "projectId": 103,
+      "accountStatement": "Active",
+      "email": "ana.martinez@email.com",
+      "phoneNumber": "+51977788899"
+    },
+    {
+      "id": 6,
+      "fullName": "Carlos López",
+      "projectId": 103,
+      "accountStatement": "Stand by",
+      "email": "carlos.lopez@email.com",
+      "phoneNumber": "+51966655544"
+    },
+    {
+      "id": 7,
+      "fullName": "Laura Fernández",
+      "projectId": 102,
+      "accountStatement": "Active",
+      "email": "laura.fernandez@email.com",
+      "phoneNumber": "+51944433322"
+    },
+    {
+      "id": 8,
+      "fullName": "David González",
+      "projectId": 102,
+      "accountStatement": "Active",
+      "email": "david.gonzalez@email.com",
+      "phoneNumber": "+51933322211"
+    },
+    {
+      "id": 9,
+      "fullName": "Isabel Sánchez",
+      "projectId": 102,
+      "accountStatement": "Active",
+      "email": "isabel.sanchez@email.com",
+      "phoneNumber": "+51922211100"
+    },
+    {
+      "id": 10,
+      "fullName": "Roberto Silva",
+      "projectId": 101,
+      "accountStatement": "Active",
+      "email": "roberto.silva@email.com",
+      "phoneNumber": "+51911100099"
+    },
+    {
+      "id": 11,
+      "fullName": "Patricia Torres",
+      "projectId": 101,
+      "accountStatement": "Stand by",
+      "email": "patricia.torres@email.com",
+      "phoneNumber": "+51900099088"
+    }
+  ],
+  "units": [
+    {
+      "id": 201,
+      "projectId": 101,
+      "unitNumber": "101",
+      "ownerId": 3
+    },
+    {
+      "id": 202,
+      "projectId": 101,
+      "unitNumber": "102",
+      "ownerId": 4
+    },
+    {
+      "id": 203,
+      "projectId": 102,
+      "unitNumber": "A-201",
+      "ownerId": 5
+    }
+  ],
+  "devices": [
+    {
+      "id": 301,
+      "name": "Sensor Temperatura Sala",
+      "type": "temperature",
+      "location": "Sala Principal",
+      "projectId": 101
+    },
+    {
+      "id": 302,
+      "name": "Medidor Energético",
+      "type": "energy",
+      "location": "Panel Eléctrico",
+      "projectId": 101
+    },
+    {
+      "id": 303,
+      "name": "Sensor Humedad",
+      "type": "humidity",
+      "location": "Dormitorio Principal",
+      "projectId": 101
+    },
+    {
+      "id": 304,
+      "name": "Control de Acceso",
+      "type": "door",
+      "location": "Entrada Principal",
+      "projectId": 101
+    },
+    {
+      "id": 305,
+      "name": "Sensor Agua",
+      "type": "water",
+      "location": "Cocina",
+      "projectId": 101
+    },
+    {
+      "id": 306,
+      "name": "Sistema Seguridad",
+      "type": "security",
+      "location": "Central",
+      "projectId": 102
+    },
+    {
+      "id": 307,
+      "name": "Control Iluminación",
+      "type": "lighting",
+      "location": "Toda la unidad",
+      "projectId": 102
+    },
+    {
+      "id": 308,
+      "name": "HVAC Central",
+      "type": "hvac",
+      "location": "Sistema Central",
+      "projectId": 102
+    }
+  ],
+  "analytics": [
+    { "id": 2001, "deviceId": 301, "timestamp": "2025-10-06T16:00:00Z", "value": 22.1, "type": "temperature", "metadata": {} },
+    { "id": 2002, "deviceId": 301, "timestamp": "2025-10-06T17:00:00Z", "value": 22.3, "type": "temperature", "metadata": {} },
+    { "id": 2003, "deviceId": 301, "timestamp": "2025-10-06T18:00:00Z", "value": 22.7, "type": "temperature", "metadata": {} },
+    { "id": 2004, "deviceId": 301, "timestamp": "2025-10-06T19:00:00Z", "value": 23.0, "type": "temperature", "metadata": {} },
+    { "id": 2005, "deviceId": 301, "timestamp": "2025-10-06T20:00:00Z", "value": 22.8, "type": "temperature", "metadata": {} },
+    { "id": 2006, "deviceId": 301, "timestamp": "2025-10-06T21:00:00Z", "value": 22.6, "type": "temperature", "metadata": {} },
+    { "id": 2007, "deviceId": 301, "timestamp": "2025-10-06T22:00:00Z", "value": 22.4, "type": "temperature", "metadata": {} },
+    { "id": 2008, "deviceId": 301, "timestamp": "2025-10-06T23:00:00Z", "value": 22.2, "type": "temperature", "metadata": {} },
+    { "id": 2009, "deviceId": 301, "timestamp": "2025-10-07T00:00:00Z", "value": 22.0, "type": "temperature", "metadata": {} },
+    { "id": 2010, "deviceId": 301, "timestamp": "2025-10-07T01:00:00Z", "value": 21.9, "type": "temperature", "metadata": {} },
+    { "id": 2011, "deviceId": 301, "timestamp": "2025-10-07T02:00:00Z", "value": 21.8, "type": "temperature", "metadata": {} },
+    { "id": 2012, "deviceId": 301, "timestamp": "2025-10-07T03:00:00Z", "value": 21.7, "type": "temperature", "metadata": {} },
+    { "id": 2013, "deviceId": 301, "timestamp": "2025-10-07T04:00:00Z", "value": 21.9, "type": "temperature", "metadata": {} },
+    { "id": 2014, "deviceId": 301, "timestamp": "2025-10-07T05:00:00Z", "value": 22.2, "type": "temperature", "metadata": {} },
+    { "id": 2015, "deviceId": 301, "timestamp": "2025-10-07T06:00:00Z", "value": 22.6, "type": "temperature", "metadata": {} },
+    { "id": 2016, "deviceId": 301, "timestamp": "2025-10-07T07:00:00Z", "value": 23.0, "type": "temperature", "metadata": {} },
+    { "id": 2017, "deviceId": 301, "timestamp": "2025-10-07T08:00:00Z", "value": 23.4, "type": "temperature", "metadata": {} },
+    { "id": 2018, "deviceId": 301, "timestamp": "2025-10-07T09:00:00Z", "value": 23.6, "type": "temperature", "metadata": {} },
+    { "id": 2019, "deviceId": 301, "timestamp": "2025-10-07T10:00:00Z", "value": 23.8, "type": "temperature", "metadata": {} },
+    { "id": 2020, "deviceId": 301, "timestamp": "2025-10-07T11:00:00Z", "value": 24.0, "type": "temperature", "metadata": {} },
+    { "id": 2021, "deviceId": 301, "timestamp": "2025-10-07T12:00:00Z", "value": 24.2, "type": "temperature", "metadata": {} },
+    { "id": 2022, "deviceId": 301, "timestamp": "2025-10-07T13:00:00Z", "value": 24.1, "type": "temperature", "metadata": {} },
+    { "id": 2023, "deviceId": 301, "timestamp": "2025-10-07T14:00:00Z", "value": 23.9, "type": "temperature", "metadata": {} },
+    { "id": 2024, "deviceId": 301, "timestamp": "2025-10-07T15:00:00Z", "value": 23.5, "type": "temperature", "metadata": {} },
+
+    { "id": 2101, "deviceId": 302, "timestamp": "2025-10-06T16:00:00Z", "value": 38.4, "type": "energy", "metadata": {} },
+    { "id": 2102, "deviceId": 302, "timestamp": "2025-10-06T17:00:00Z", "value": 39.0, "type": "energy", "metadata": {} },
+    { "id": 2103, "deviceId": 302, "timestamp": "2025-10-06T18:00:00Z", "value": 40.2, "type": "energy", "metadata": {} },
+    { "id": 2104, "deviceId": 302, "timestamp": "2025-10-06T19:00:00Z", "value": 41.0, "type": "energy", "metadata": {} },
+    { "id": 2105, "deviceId": 302, "timestamp": "2025-10-06T20:00:00Z", "value": 40.6, "type": "energy", "metadata": {} },
+    { "id": 2106, "deviceId": 302, "timestamp": "2025-10-06T21:00:00Z", "value": 39.8, "type": "energy", "metadata": {} },
+    { "id": 2107, "deviceId": 302, "timestamp": "2025-10-06T22:00:00Z", "value": 38.9, "type": "energy", "metadata": {} },
+    { "id": 2108, "deviceId": 302, "timestamp": "2025-10-06T23:00:00Z", "value": 38.0, "type": "energy", "metadata": {} },
+    { "id": 2109, "deviceId": 302, "timestamp": "2025-10-07T00:00:00Z", "value": 37.5, "type": "energy", "metadata": {} },
+    { "id": 2110, "deviceId": 302, "timestamp": "2025-10-07T01:00:00Z", "value": 36.9, "type": "energy", "metadata": {} },
+    { "id": 2111, "deviceId": 302, "timestamp": "2025-10-07T02:00:00Z", "value": 36.5, "type": "energy", "metadata": {} },
+    { "id": 2112, "deviceId": 302, "timestamp": "2025-10-07T03:00:00Z", "value": 36.8, "type": "energy", "metadata": {} },
+    { "id": 2113, "deviceId": 302, "timestamp": "2025-10-07T04:00:00Z", "value": 37.2, "type": "energy", "metadata": {} },
+    { "id": 2114, "deviceId": 302, "timestamp": "2025-10-07T05:00:00Z", "value": 37.9, "type": "energy", "metadata": {} },
+    { "id": 2115, "deviceId": 302, "timestamp": "2025-10-07T06:00:00Z", "value": 38.6, "type": "energy", "metadata": {} },
+    { "id": 2116, "deviceId": 302, "timestamp": "2025-10-07T07:00:00Z", "value": 39.4, "type": "energy", "metadata": {} },
+    { "id": 2117, "deviceId": 302, "timestamp": "2025-10-07T08:00:00Z", "value": 40.0, "type": "energy", "metadata": {} },
+    { "id": 2118, "deviceId": 302, "timestamp": "2025-10-07T09:00:00Z", "value": 40.6, "type": "energy", "metadata": {} },
+    { "id": 2119, "deviceId": 302, "timestamp": "2025-10-07T10:00:00Z", "value": 41.2, "type": "energy", "metadata": {} },
+    { "id": 2120, "deviceId": 302, "timestamp": "2025-10-07T11:00:00Z", "value": 41.7, "type": "energy", "metadata": {} },
+    { "id": 2121, "deviceId": 302, "timestamp": "2025-10-07T12:00:00Z", "value": 42.0, "type": "energy", "metadata": {} },
+    { "id": 2122, "deviceId": 302, "timestamp": "2025-10-07T13:00:00Z", "value": 41.8, "type": "energy", "metadata": {} },
+    { "id": 2123, "deviceId": 302, "timestamp": "2025-10-07T14:00:00Z", "value": 41.3, "type": "energy", "metadata": {} },
+    { "id": 2124, "deviceId": 302, "timestamp": "2025-10-07T15:00:00Z", "value": 41.5, "type": "energy", "metadata": {} },
+
+    { "id": 3001, "deviceId": 301, "timestamp": "2025-09-30T00:00:00Z", "value": 22.8, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3002, "deviceId": 301, "timestamp": "2025-10-01T00:00:00Z", "value": 22.9, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3003, "deviceId": 301, "timestamp": "2025-10-02T00:00:00Z", "value": 23.1, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3004, "deviceId": 301, "timestamp": "2025-10-03T00:00:00Z", "value": 23.0, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3005, "deviceId": 301, "timestamp": "2025-10-04T00:00:00Z", "value": 23.2, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3006, "deviceId": 301, "timestamp": "2025-10-05T00:00:00Z", "value": 23.3, "type": "temperature_daily_avg", "metadata": {} },
+    { "id": 3007, "deviceId": 301, "timestamp": "2025-10-06T00:00:00Z", "value": 23.4, "type": "temperature_daily_avg", "metadata": {} },
+
+    { "id": 3101, "deviceId": 302, "timestamp": "2025-09-30T00:00:00Z", "value": 820, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3102, "deviceId": 302, "timestamp": "2025-10-01T00:00:00Z", "value": 835, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3103, "deviceId": 302, "timestamp": "2025-10-02T00:00:00Z", "value": 810, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3104, "deviceId": 302, "timestamp": "2025-10-03T00:00:00Z", "value": 840, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3105, "deviceId": 302, "timestamp": "2025-10-04T00:00:00Z", "value": 855, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3106, "deviceId": 302, "timestamp": "2025-10-05T00:00:00Z", "value": 870, "type": "energy_daily_total", "metadata": {} },
+    { "id": 3107, "deviceId": 302, "timestamp": "2025-10-06T00:00:00Z", "value": 885, "type": "energy_daily_total", "metadata": {} }
+  ],
+  "device_configurations": [
+    {
+      "id": 1,
+      "deviceId": 301,
+      "unitId": 201,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:30:00Z",
+      "value": 23.5,
+      "unit": "°C",
+      "settings": {
+        "on": true,
+        "brightness": 80,
+        "color": "#FFDDC4"
+      }
+    },
+    {
+      "id": 2,
+      "deviceId": 302,
+      "unitId": 201,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:28:00Z",
+      "value": 42.8,
+      "unit": "kWh",
+      "settings": {
+        "on": true,
+        "temperature": 22,
+        "mode": "cool"
+      }
+    },
+    {
+      "id": 3,
+      "deviceId": 301,
+      "unitId": 202,
+      "status": "offline",
+      "lastUpdate": "2025-01-07T14:45:00Z",
+      "value": null,
+      "unit": null,
+      "settings": {
+        "on": false,
+        "brightness": 100,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "id": 4,
+      "deviceId": 303,
+      "unitId": 201,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:25:00Z",
+      "value": 65,
+      "unit": "%",
+      "settings": {}
+    },
+    {
+      "id": 5,
+      "deviceId": 304,
+      "unitId": 202,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:20:00Z",
+      "value": 0,
+      "unit": "",
+      "settings": {}
+    },
+    {
+      "id": 6,
+      "deviceId": 305,
+      "unitId": 202,
+      "status": "offline",
+      "lastUpdate": "2025-01-07T14:45:00Z",
+      "value": 156,
+      "unit": "L",
+      "settings": {}
+    },
+    {
+      "id": 7,
+      "deviceId": 306,
+      "unitId": 203,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:32:00Z",
+      "value": 1,
+      "unit": "",
+      "settings": {}
+    },
+    {
+      "id": 8,
+      "deviceId": 307,
+      "unitId": 203,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:29:00Z",
+      "value": 75,
+      "unit": "%",
+      "settings": {}
+    },
+    {
+      "id": 9,
+      "deviceId": 308,
+      "unitId": 203,
+      "status": "online",
+      "lastUpdate": "2025-01-07T15:31:00Z",
+      "value": 21,
+      "unit": "°C",
+      "settings": {}
+    }
+  ],
+  "scenes": [
     {
       "id": 401,
-      "mascotaId": 1,
-      "citaId": 701,
-      "nombreVacuna": "Antirrábica",
-      "fechaAplicacion": "2025-09-01T10:15:00.000Z"
+      "unitId": 201,
+      "name": "Modo Cine"
     }
   ],
-  "notificaciones": [
-    {
-      "id": 901,
-      "usuarioId": 501,
-      "mensaje": "Recordatorio: La cita de Bruno es mañana.",
-      "tipo": "RecordatorioCita",
-      "leido": false,
-      "createdAt": "2025-10-05T09:00:00.000Z"
-    },
-    {
-      "id": 902,
-      "usuarioId": 502,
-      "mensaje": "Su factura 803 por S/580.00 ha vencido.",
-      "tipo": "RecordatorioPago",
-      "leido": true,
-      "createdAt": "2025-10-04T12:30:00.000Z"
-    },
-    {
-      "id": 910,
-      "usuarioId": 510,
-      "mensaje": "Bienvenido a Dogimax, Javier. Registra a tu mascota.",
-      "tipo": "Bienvenida",
-      "leido": false,
-      "createdAt": "2025-10-03T15:45:00.000Z"
-    }
-  ],
-  "recomendaciones": [
-    {
-      "id": 1001,
-      "mascotaId": 1,
-      "tipo": "Alimentacion",
-      "titulo": "Ajuste de dieta",
-      "descripcion": "Incrementar proteína y reducir carbohidratos",
-      "prioridad": "Media",
-      "fechaGeneracion": "2025-10-01T09:00:00.000Z",
-      "fechaVencimiento": "2025-10-15T09:00:00.000Z",
-      "completada": false,
-      "fuenteIA": "modelo-nutricion-v1",
-      "confianza": 82,
-      "parametros": {
-        "actividad": "moderada"
-      }
-    },
-    {
-      "id": 1002,
-      "mascotaId": 1,
-      "tipo": "Ejercicio",
-      "titulo": "Paseos diarios",
-      "descripcion": "2 paseos de 20 minutos",
-      "prioridad": "Baja",
-      "fechaGeneracion": "2025-10-02T10:00:00.000Z",
-      "completada": false,
-      "fuenteIA": "modelo-actividad-v2",
-      "confianza": 76
-    }
-  ],
-  "ia-respuestas": [
-    {
-      "id": 2001,
-      "mascotaId": 1,
-      "tipoAnalisis": "General",
-      "recomendaciones": [
-        1001,
-        1002
-      ],
-      "resumen": "Plan general de mejoras",
-      "confianza": 80,
-      "fechaGeneracion": "2025-10-03T12:00:00.000Z"
-    }
-  ],
-  "recomendaciones-estadisticas": [
+  "scene_actions": [
     {
       "id": 1,
-      "mascotaId": 1,
-      "total": 2,
-      "completadas": 0,
-      "pendientes": 2,
-      "vencidas": 0,
-      "porTipo": {
-        "Alimentacion": 1,
-        "Ejercicio": 1
-      },
-      "porPrioridad": {
-        "Baja": 1,
-        "Media": 1
+      "sceneId": 401,
+      "device_configuration_id": 1,
+      "target_settings": {
+        "on": true,
+        "brightness": 20,
+        "color": "#5C67FF"
       }
+    },
+    {
+      "id": 2,
+      "sceneId": 401,
+      "device_configuration_id": 2,
+      "target_settings": {
+        "temperature": 21
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "id": 501,
+      "unitId": 202,
+      "device_configuration_id": 3,
+      "message": "La 'Luz de Sala' en la unidad 102 se ha desconectado."
     }
   ]
 }
