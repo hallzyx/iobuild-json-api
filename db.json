@@ -88,13 +88,40 @@
       "id": 1,
       "builderId": 1,
       "plan": "Professional",
-      "status": "active"
+      "status": "active",
+      "startDate": "2024-01-01T00:00:00Z",
+      "endDate": "2024-12-31T23:59:59Z",
+      "price": 799,
+      "features": [
+        "Up to 200 IoT devices",
+        "Advanced dashboard",
+        "24/7 priority support",
+        "Updates and new features",
+        "3 administrators",
+        "Real-time reports",
+        "Custom API",
+        "Training included"
+      ]
     },
     {
       "id": 2,
       "builderId": 2,
       "plan": "Enterprise",
-      "status": "active"
+      "status": "active",
+      "price": 1299,
+      "startDate": "2024-01-01T00:00:00Z",
+      "endDate": "2024-12-31T23:59:59Z",
+      "features": [
+        "Unlimited IoT devices",
+        "Enterprise dashboard",
+        "Dedicated 24/7 support",
+        "Development of custom features",
+        "Unlimited administrators",
+        "Advanced analytics",
+        "Complete API",
+        "Specialized consulting",
+        "Guaranteed SLA"
+      ]
     }
   ],
   "projects": [
@@ -107,7 +134,8 @@
       "occupiedUnits": 32,
       "status": "active",
       "builderId": 1,
-      "createdDate": "2024-03-15T00:00:00Z"
+      "createdDate": "2024-03-15T00:00:00Z",
+      "imageUrl": "https://i.pinimg.com/736x/9e/f0/04/9ef004e38f30cca877fbfabbb0727ba1.jpg"
     },
     {
       "id": 102,
@@ -118,7 +146,8 @@
       "occupiedUnits": 98,
       "status": "active",
       "builderId": 1,
-      "createdDate": "2024-01-20T00:00:00Z"
+      "createdDate": "2024-01-20T00:00:00Z",
+      "imageUrl": "https://i.pinimg.com/736x/a7/55/f4/a755f4536457ce22a897e393d9c535c1.jpg"
     },
     {
       "id": 103,
@@ -129,7 +158,8 @@
       "occupiedUnits": 45,
       "status": "construction",
       "builderId": 2,
-      "createdDate": "2024-06-10T00:00:00Z"
+      "createdDate": "2024-06-10T00:00:00Z",
+      "imageUrl": "https://www.abc.com.py/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fabccolor%2FANZTJK3F2FH7TCL74ZW7BOLOXI.jpg?auth=61ccae0349176592e0ae22d1c0a4f7af8d36ac237d31ae6e40a746b0d33f67d5&smart=true&width=400"
     }
   ],
   "external_clients": [
@@ -221,9 +251,11 @@
       "id": 11,
       "fullName": "Patricia Torres",
       "projectId": 101,
-      "accountStatement": "Stand by",
+      "projectName": "",
+      "accountStatement": "Suspended",
       "email": "patricia.torres@email.com",
-      "phoneNumber": "+51900099088"
+      "phoneNumber": "+51900099088",
+      "address": ""
     }
   ],
   "units": [
@@ -249,127 +281,566 @@
   "devices": [
     {
       "id": 301,
-      "name": "Sensor Temperatura Sala",
-      "type": "temperature",
-      "location": "Sala Principal",
-      "projectId": 101
+      "name": "Smart meter",
+      "type": "energy",
+      "location": "Main Living Room",
+      "projectId": 101,
+      "status": "Online"
     },
     {
       "id": 302,
-      "name": "Medidor Energético",
+      "name": "Energy Meter",
       "type": "energy",
-      "location": "Panel Eléctrico",
-      "projectId": 101
+      "location": "Electrical Panel",
+      "projectId": 101,
+      "status": "Online"
     },
     {
       "id": 303,
-      "name": "Sensor Humedad",
+      "name": "Humidity Sensor",
       "type": "humidity",
-      "location": "Dormitorio Principal",
-      "projectId": 101
+      "location": "Master Bedroom",
+      "projectId": 101,
+      "status": "Offline"
     },
     {
       "id": 304,
-      "name": "Control de Acceso",
+      "name": "Access Control System",
       "type": "door",
-      "location": "Entrada Principal",
-      "projectId": 101
+      "location": "Main Entrance",
+      "projectId": 101,
+      "status": "Online"
     },
     {
       "id": 305,
-      "name": "Sensor Agua",
+      "name": "Water Sensor",
       "type": "water",
-      "location": "Cocina",
-      "projectId": 101
+      "location": "Kitchen",
+      "projectId": 101,
+      "status": "Offline"
     },
     {
       "id": 306,
-      "name": "Sistema Seguridad",
+      "name": "Security System",
       "type": "security",
-      "location": "Central",
-      "projectId": 102
+      "location": "Central Hub",
+      "projectId": 102,
+      "status": "Online"
     },
     {
       "id": 307,
-      "name": "Control Iluminación",
+      "name": "Lighting Control",
       "type": "lighting",
-      "location": "Toda la unidad",
-      "projectId": 102
+      "location": "Entire Unit",
+      "projectId": 102,
+      "status": "Online"
     },
     {
       "id": 308,
-      "name": "HVAC Central",
+      "name": "HVAC Central System",
       "type": "hvac",
-      "location": "Sistema Central",
-      "projectId": 102
+      "location": "Central System",
+      "projectId": 102,
+      "status": "Online"
     }
   ],
   "analytics": [
-    { "id": 2001, "deviceId": 301, "timestamp": "2025-10-06T16:00:00Z", "value": 22.1, "type": "temperature", "metadata": {} },
-    { "id": 2002, "deviceId": 301, "timestamp": "2025-10-06T17:00:00Z", "value": 22.3, "type": "temperature", "metadata": {} },
-    { "id": 2003, "deviceId": 301, "timestamp": "2025-10-06T18:00:00Z", "value": 22.7, "type": "temperature", "metadata": {} },
-    { "id": 2004, "deviceId": 301, "timestamp": "2025-10-06T19:00:00Z", "value": 23.0, "type": "temperature", "metadata": {} },
-    { "id": 2005, "deviceId": 301, "timestamp": "2025-10-06T20:00:00Z", "value": 22.8, "type": "temperature", "metadata": {} },
-    { "id": 2006, "deviceId": 301, "timestamp": "2025-10-06T21:00:00Z", "value": 22.6, "type": "temperature", "metadata": {} },
-    { "id": 2007, "deviceId": 301, "timestamp": "2025-10-06T22:00:00Z", "value": 22.4, "type": "temperature", "metadata": {} },
-    { "id": 2008, "deviceId": 301, "timestamp": "2025-10-06T23:00:00Z", "value": 22.2, "type": "temperature", "metadata": {} },
-    { "id": 2009, "deviceId": 301, "timestamp": "2025-10-07T00:00:00Z", "value": 22.0, "type": "temperature", "metadata": {} },
-    { "id": 2010, "deviceId": 301, "timestamp": "2025-10-07T01:00:00Z", "value": 21.9, "type": "temperature", "metadata": {} },
-    { "id": 2011, "deviceId": 301, "timestamp": "2025-10-07T02:00:00Z", "value": 21.8, "type": "temperature", "metadata": {} },
-    { "id": 2012, "deviceId": 301, "timestamp": "2025-10-07T03:00:00Z", "value": 21.7, "type": "temperature", "metadata": {} },
-    { "id": 2013, "deviceId": 301, "timestamp": "2025-10-07T04:00:00Z", "value": 21.9, "type": "temperature", "metadata": {} },
-    { "id": 2014, "deviceId": 301, "timestamp": "2025-10-07T05:00:00Z", "value": 22.2, "type": "temperature", "metadata": {} },
-    { "id": 2015, "deviceId": 301, "timestamp": "2025-10-07T06:00:00Z", "value": 22.6, "type": "temperature", "metadata": {} },
-    { "id": 2016, "deviceId": 301, "timestamp": "2025-10-07T07:00:00Z", "value": 23.0, "type": "temperature", "metadata": {} },
-    { "id": 2017, "deviceId": 301, "timestamp": "2025-10-07T08:00:00Z", "value": 23.4, "type": "temperature", "metadata": {} },
-    { "id": 2018, "deviceId": 301, "timestamp": "2025-10-07T09:00:00Z", "value": 23.6, "type": "temperature", "metadata": {} },
-    { "id": 2019, "deviceId": 301, "timestamp": "2025-10-07T10:00:00Z", "value": 23.8, "type": "temperature", "metadata": {} },
-    { "id": 2020, "deviceId": 301, "timestamp": "2025-10-07T11:00:00Z", "value": 24.0, "type": "temperature", "metadata": {} },
-    { "id": 2021, "deviceId": 301, "timestamp": "2025-10-07T12:00:00Z", "value": 24.2, "type": "temperature", "metadata": {} },
-    { "id": 2022, "deviceId": 301, "timestamp": "2025-10-07T13:00:00Z", "value": 24.1, "type": "temperature", "metadata": {} },
-    { "id": 2023, "deviceId": 301, "timestamp": "2025-10-07T14:00:00Z", "value": 23.9, "type": "temperature", "metadata": {} },
-    { "id": 2024, "deviceId": 301, "timestamp": "2025-10-07T15:00:00Z", "value": 23.5, "type": "temperature", "metadata": {} },
-
-    { "id": 2101, "deviceId": 302, "timestamp": "2025-10-06T16:00:00Z", "value": 38.4, "type": "energy", "metadata": {} },
-    { "id": 2102, "deviceId": 302, "timestamp": "2025-10-06T17:00:00Z", "value": 39.0, "type": "energy", "metadata": {} },
-    { "id": 2103, "deviceId": 302, "timestamp": "2025-10-06T18:00:00Z", "value": 40.2, "type": "energy", "metadata": {} },
-    { "id": 2104, "deviceId": 302, "timestamp": "2025-10-06T19:00:00Z", "value": 41.0, "type": "energy", "metadata": {} },
-    { "id": 2105, "deviceId": 302, "timestamp": "2025-10-06T20:00:00Z", "value": 40.6, "type": "energy", "metadata": {} },
-    { "id": 2106, "deviceId": 302, "timestamp": "2025-10-06T21:00:00Z", "value": 39.8, "type": "energy", "metadata": {} },
-    { "id": 2107, "deviceId": 302, "timestamp": "2025-10-06T22:00:00Z", "value": 38.9, "type": "energy", "metadata": {} },
-    { "id": 2108, "deviceId": 302, "timestamp": "2025-10-06T23:00:00Z", "value": 38.0, "type": "energy", "metadata": {} },
-    { "id": 2109, "deviceId": 302, "timestamp": "2025-10-07T00:00:00Z", "value": 37.5, "type": "energy", "metadata": {} },
-    { "id": 2110, "deviceId": 302, "timestamp": "2025-10-07T01:00:00Z", "value": 36.9, "type": "energy", "metadata": {} },
-    { "id": 2111, "deviceId": 302, "timestamp": "2025-10-07T02:00:00Z", "value": 36.5, "type": "energy", "metadata": {} },
-    { "id": 2112, "deviceId": 302, "timestamp": "2025-10-07T03:00:00Z", "value": 36.8, "type": "energy", "metadata": {} },
-    { "id": 2113, "deviceId": 302, "timestamp": "2025-10-07T04:00:00Z", "value": 37.2, "type": "energy", "metadata": {} },
-    { "id": 2114, "deviceId": 302, "timestamp": "2025-10-07T05:00:00Z", "value": 37.9, "type": "energy", "metadata": {} },
-    { "id": 2115, "deviceId": 302, "timestamp": "2025-10-07T06:00:00Z", "value": 38.6, "type": "energy", "metadata": {} },
-    { "id": 2116, "deviceId": 302, "timestamp": "2025-10-07T07:00:00Z", "value": 39.4, "type": "energy", "metadata": {} },
-    { "id": 2117, "deviceId": 302, "timestamp": "2025-10-07T08:00:00Z", "value": 40.0, "type": "energy", "metadata": {} },
-    { "id": 2118, "deviceId": 302, "timestamp": "2025-10-07T09:00:00Z", "value": 40.6, "type": "energy", "metadata": {} },
-    { "id": 2119, "deviceId": 302, "timestamp": "2025-10-07T10:00:00Z", "value": 41.2, "type": "energy", "metadata": {} },
-    { "id": 2120, "deviceId": 302, "timestamp": "2025-10-07T11:00:00Z", "value": 41.7, "type": "energy", "metadata": {} },
-    { "id": 2121, "deviceId": 302, "timestamp": "2025-10-07T12:00:00Z", "value": 42.0, "type": "energy", "metadata": {} },
-    { "id": 2122, "deviceId": 302, "timestamp": "2025-10-07T13:00:00Z", "value": 41.8, "type": "energy", "metadata": {} },
-    { "id": 2123, "deviceId": 302, "timestamp": "2025-10-07T14:00:00Z", "value": 41.3, "type": "energy", "metadata": {} },
-    { "id": 2124, "deviceId": 302, "timestamp": "2025-10-07T15:00:00Z", "value": 41.5, "type": "energy", "metadata": {} },
-
-    { "id": 3001, "deviceId": 301, "timestamp": "2025-09-30T00:00:00Z", "value": 22.8, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3002, "deviceId": 301, "timestamp": "2025-10-01T00:00:00Z", "value": 22.9, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3003, "deviceId": 301, "timestamp": "2025-10-02T00:00:00Z", "value": 23.1, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3004, "deviceId": 301, "timestamp": "2025-10-03T00:00:00Z", "value": 23.0, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3005, "deviceId": 301, "timestamp": "2025-10-04T00:00:00Z", "value": 23.2, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3006, "deviceId": 301, "timestamp": "2025-10-05T00:00:00Z", "value": 23.3, "type": "temperature_daily_avg", "metadata": {} },
-    { "id": 3007, "deviceId": 301, "timestamp": "2025-10-06T00:00:00Z", "value": 23.4, "type": "temperature_daily_avg", "metadata": {} },
-
-    { "id": 3101, "deviceId": 302, "timestamp": "2025-09-30T00:00:00Z", "value": 820, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3102, "deviceId": 302, "timestamp": "2025-10-01T00:00:00Z", "value": 835, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3103, "deviceId": 302, "timestamp": "2025-10-02T00:00:00Z", "value": 810, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3104, "deviceId": 302, "timestamp": "2025-10-03T00:00:00Z", "value": 840, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3105, "deviceId": 302, "timestamp": "2025-10-04T00:00:00Z", "value": 855, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3106, "deviceId": 302, "timestamp": "2025-10-05T00:00:00Z", "value": 870, "type": "energy_daily_total", "metadata": {} },
-    { "id": 3107, "deviceId": 302, "timestamp": "2025-10-06T00:00:00Z", "value": 885, "type": "energy_daily_total", "metadata": {} }
+    {
+      "id": 2001,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T16:00:00Z",
+      "value": 22.1,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2002,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T17:00:00Z",
+      "value": 22.3,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2003,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T18:00:00Z",
+      "value": 22.7,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2004,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T19:00:00Z",
+      "value": 23,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2005,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T20:00:00Z",
+      "value": 22.8,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2006,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T21:00:00Z",
+      "value": 22.6,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2007,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T22:00:00Z",
+      "value": 22.4,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2008,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T23:00:00Z",
+      "value": 22.2,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2009,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T00:00:00Z",
+      "value": 22,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2010,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T01:00:00Z",
+      "value": 21.9,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2011,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T02:00:00Z",
+      "value": 21.8,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2012,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T03:00:00Z",
+      "value": 21.7,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2013,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T04:00:00Z",
+      "value": 21.9,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2014,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T05:00:00Z",
+      "value": 22.2,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2015,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T06:00:00Z",
+      "value": 22.6,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2016,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T07:00:00Z",
+      "value": 23,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2017,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T08:00:00Z",
+      "value": 23.4,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2018,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T09:00:00Z",
+      "value": 23.6,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2019,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T10:00:00Z",
+      "value": 23.8,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2020,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T11:00:00Z",
+      "value": 24,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2021,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T12:00:00Z",
+      "value": 24.2,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2022,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T13:00:00Z",
+      "value": 24.1,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2023,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T14:00:00Z",
+      "value": 23.9,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2024,
+      "deviceId": 301,
+      "timestamp": "2025-10-07T15:00:00Z",
+      "value": 23.5,
+      "type": "temperature",
+      "metadata": {}
+    },
+    {
+      "id": 2101,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T16:00:00Z",
+      "value": 38.4,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2102,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T17:00:00Z",
+      "value": 39,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2103,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T18:00:00Z",
+      "value": 40.2,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2104,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T19:00:00Z",
+      "value": 41,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2105,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T20:00:00Z",
+      "value": 40.6,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2106,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T21:00:00Z",
+      "value": 39.8,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2107,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T22:00:00Z",
+      "value": 38.9,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2108,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T23:00:00Z",
+      "value": 38,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2109,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T00:00:00Z",
+      "value": 37.5,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2110,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T01:00:00Z",
+      "value": 36.9,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2111,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T02:00:00Z",
+      "value": 36.5,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2112,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T03:00:00Z",
+      "value": 36.8,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2113,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T04:00:00Z",
+      "value": 37.2,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2114,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T05:00:00Z",
+      "value": 37.9,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2115,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T06:00:00Z",
+      "value": 38.6,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2116,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T07:00:00Z",
+      "value": 39.4,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2117,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T08:00:00Z",
+      "value": 40,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2118,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T09:00:00Z",
+      "value": 40.6,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2119,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T10:00:00Z",
+      "value": 41.2,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2120,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T11:00:00Z",
+      "value": 41.7,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2121,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T12:00:00Z",
+      "value": 42,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2122,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T13:00:00Z",
+      "value": 41.8,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2123,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T14:00:00Z",
+      "value": 41.3,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 2124,
+      "deviceId": 302,
+      "timestamp": "2025-10-07T15:00:00Z",
+      "value": 41.5,
+      "type": "energy",
+      "metadata": {}
+    },
+    {
+      "id": 3001,
+      "deviceId": 301,
+      "timestamp": "2025-09-30T00:00:00Z",
+      "value": 22.8,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3002,
+      "deviceId": 301,
+      "timestamp": "2025-10-01T00:00:00Z",
+      "value": 22.9,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3003,
+      "deviceId": 301,
+      "timestamp": "2025-10-02T00:00:00Z",
+      "value": 23.1,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3004,
+      "deviceId": 301,
+      "timestamp": "2025-10-03T00:00:00Z",
+      "value": 23,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3005,
+      "deviceId": 301,
+      "timestamp": "2025-10-04T00:00:00Z",
+      "value": 23.2,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3006,
+      "deviceId": 301,
+      "timestamp": "2025-10-05T00:00:00Z",
+      "value": 23.3,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3007,
+      "deviceId": 301,
+      "timestamp": "2025-10-06T00:00:00Z",
+      "value": 23.4,
+      "type": "temperature_daily_avg",
+      "metadata": {}
+    },
+    {
+      "id": 3101,
+      "deviceId": 302,
+      "timestamp": "2025-09-30T00:00:00Z",
+      "value": 820,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3102,
+      "deviceId": 302,
+      "timestamp": "2025-10-01T00:00:00Z",
+      "value": 835,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3103,
+      "deviceId": 302,
+      "timestamp": "2025-10-02T00:00:00Z",
+      "value": 810,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3104,
+      "deviceId": 302,
+      "timestamp": "2025-10-03T00:00:00Z",
+      "value": 840,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3105,
+      "deviceId": 302,
+      "timestamp": "2025-10-04T00:00:00Z",
+      "value": 855,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3106,
+      "deviceId": 302,
+      "timestamp": "2025-10-05T00:00:00Z",
+      "value": 870,
+      "type": "energy_daily_total",
+      "metadata": {}
+    },
+    {
+      "id": 3107,
+      "deviceId": 302,
+      "timestamp": "2025-10-06T00:00:00Z",
+      "value": 885,
+      "type": "energy_daily_total",
+      "metadata": {}
+    }
   ],
   "device_configurations": [
     {
